@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumentity | Our Work</title>
+  <meta name="description" content="Working draft of the Lumentity Our Work / Experience page." />
+  <style>
+    :root {
+      --brand: #003366;
+      --brand-light: #1a5490;
+      --gold: #FFC107;
+      --ink: #1f2937;
+      --muted: #64748b;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --border: #e2e8f0;
+      --radius: 14px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Inter, "Segoe UI", system-ui, -apple-system, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; }
+    a { color: var(--brand-light); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+    header.site-header { background: var(--card); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 50; }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 24px; max-width: 1080px; margin: 0 auto; }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .brand-name { font-size: 1.35rem; font-weight: 700; color: var(--brand); letter-spacing: 0.01em; }
+    nav.main-nav { display: flex; gap: 26px; align-items: center; }
+    nav.main-nav a { color: var(--ink); font-weight: 500; font-size: 0.95rem; }
+    nav.main-nav a.btn-primary { color: #fff; }
+    .btn { display: inline-block; padding: 10px 20px; border-radius: 999px; font-weight: 600; font-size: 0.95rem; border: none; cursor: pointer; }
+    .btn-primary { background: var(--brand); color: #fff; }
+    .btn-primary:hover { background: var(--brand-light); text-decoration: none; }
+    .btn-gold { background: var(--gold); color: #1f2937; }
+
+    .page-hero { background: linear-gradient(160deg, #0b2545 0%, #003366 55%, #123f6d 100%); color: #fff; padding: 52px 0 56px; }
+    .page-hero .eyebrow { text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.78rem; color: var(--gold); font-weight: 700; margin-bottom: 14px; }
+    .page-hero h1 { font-size: 2.1rem; line-height: 1.15; font-weight: 800; max-width: 760px; }
+    .page-hero p.lede { margin: 16px 0 0; font-size: 1.05rem; max-width: 680px; color: #dbe6f3; }
+
+    section { padding: 64px 0; }
+    .band { background: var(--card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .section-head { text-align: center; max-width: 680px; margin: 0 auto 44px; }
+    .section-head .kicker { text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.75rem; color: var(--brand-light); font-weight: 700; margin-bottom: 10px; }
+    .section-head h2 { font-size: 1.9rem; font-weight: 800; color: var(--brand); }
+    .section-head p { color: var(--muted); margin-top: 12px; }
+
+    .case-list { display: grid; grid-template-columns: 1fr; gap: 40px; max-width: 860px; margin: 0 auto; }
+    .case-study { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 36px 34px; }
+    .case-top { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--brand-light); margin-bottom: 8px; }
+    .case-study h3 { color: var(--brand); font-size: 1.4rem; margin-bottom: 6px; }
+    .case-sub { color: var(--muted); font-size: 0.92rem; font-style: italic; margin-bottom: 16px; }
+    .case-study p { color: #334155; font-size: 0.98rem; margin-bottom: 12px; }
+    .metrics { display: flex; gap: 32px; flex-wrap: wrap; margin: 20px 0 8px; }
+    .metric { min-width: 130px; }
+    .metric .num { font-size: 1.7rem; font-weight: 800; color: var(--brand); }
+    .metric .lbl { font-size: 0.8rem; color: var(--muted); }
+    .metric-note { font-size: 0.78rem; color: var(--muted); margin-top: 10px; }
+    .case-tags { margin-top: 14px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .tag { background: #eaf1f9; color: var(--brand); font-size: 0.78rem; font-weight: 600; padding: 4px 12px; border-radius: 999px; }
+
+    .honesty { background: #eaf1f9; border-left: 4px solid var(--brand); border-radius: 0 var(--radius) var(--radius) 0; padding: 24px 28px; max-width: 860px; margin: 48px auto 0; }
+    .honesty h3 { color: var(--brand); font-size: 1.05rem; margin-bottom: 8px; }
+    .honesty p { color: #334155; font-size: 0.95rem; }
+
+    .sector-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+    .sector-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 26px 24px; }
+    .sector-card h3 { color: var(--brand); font-size: 1.05rem; margin-bottom: 8px; }
+    .sector-card p { color: var(--muted); font-size: 0.92rem; }
+
+    .cta-band { background: linear-gradient(140deg, #003366, #0b2545); color: #fff; text-align: center; }
+    .cta-band h2 { font-size: 1.8rem; font-weight: 800; margin-bottom: 12px; }
+    .cta-band p { color: #dbe6f3; max-width: 560px; margin: 0 auto 28px; }
+
+    footer.site-footer { background: #0b1e33; color: #94a8c0; padding: 48px 0 36px; font-size: 0.9rem; }
+    .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; }
+    .footer-grid h4 { color: #fff; font-size: 0.95rem; margin-bottom: 14px; }
+    .footer-grid ul { list-style: none; }
+    .footer-grid ul li { padding: 4px 0; }
+    .footer-grid a { color: #94a8c0; }
+    .footer-grid a:hover { color: #fff; }
+    .footer-bottom { border-top: 1px solid #1e3350; margin-top: 36px; padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; font-size: 0.82rem; }
+
+    @media (max-width: 860px) {
+      .footer-grid { grid-template-columns: 1fr; }
+      nav.main-nav { display: none; }
+      .metrics { gap: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <svg width="40" height="40" viewBox="0 0 100 100" aria-label="Lumentity logo mark">
+        <g stroke="#003366" stroke-width="7" stroke-linecap="round">
+          <line x1="50" y1="50" x2="50" y2="8"  /><polygon points="50,0 43,14 57,14" fill="#003366"/>
+          <line x1="50" y1="50" x2="50" y2="92" /><polygon points="50,100 43,86 57,86" fill="#003366"/>
+          <line x1="50" y1="50" x2="8"  y2="50" /><polygon points="0,50 14,43 14,57" fill="#003366"/>
+          <line x1="50" y1="50" x2="92" y2="50" /><polygon points="100,50 86,43 86,57" fill="#003366"/>
+          <line x1="50" y1="50" x2="20" y2="20" /><polygon points="14,14 26,20 20,26" fill="#FFC107"/>
+          <line x1="50" y1="50" x2="80" y2="20" /><polygon points="86,14 80,26 74,20" fill="#FFC107"/>
+          <line x1="50" y1="50" x2="20" y2="80" /><polygon points="14,86 20,74 26,80" fill="#FFC107"/>
+          <line x1="50" y1="50" x2="80" y2="80" /><polygon points="86,86 74,80 80,74" fill="#FFC107"/>
+        </g>
+        <circle cx="50" cy="50" r="9" fill="#003366"/>
+      </svg>
+      <span class="brand-name">Lumentity</span>
+    </div>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="/services">Services</a>
+      <a href="/about">Why Lumentity</a>
+      <a href="/work">Our Work</a>
+      <a href="/faq">FAQ</a>
+      <a class="btn btn-primary" href="/contact">Get in Touch</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="eyebrow">Our Work</div>
+    <h1>Created, built, and maintained — with clients, not for them</h1>
+    <p class="lede">
+      Not a wall of logos — the story of work we've led on platforms that matter, told
+      with real numbers and honest attribution. Each case below is an engagement we can
+      talk about in detail, at reference-call depth.
+    </p>
+  </div>
+</div>
+
+<!-- ============ CASE STUDIES ============ -->
+<section>
+  <div class="container">
+    <div class="case-list">
+
+      <article class="case-study">
+        <div class="case-top">UC San Francisco · Higher Education</div>
+        <h3>A university-wide Drupal platform, grown from zero</h3>
+        <div class="case-sub">John's flagship engagement — 20+ years at UCSF, ending as Website Services Manager</div>
+        <p>
+          When UCSF needed a way to serve hundreds of departments without hundreds of
+          bespoke sites, John built the answer: a Drupal multisite platform architected
+          to be the university's standard web service — designed, automated, and
+          supported as a product rather than a one-off build.
+        </p>
+        <p>
+          The platform grew to serve the breadth of campus, moving launches and
+          upgrades that once took weeks to minutes through automated deployment. Today
+          the platform is run by UCSF's own staff, with Acquia handling hosting — a
+          service built to outlast its architect.
+        </p>
+        <div class="metrics">
+          <div class="metric"><div class="num">~1,800</div><div class="lbl">sites on the starter kit platform</div></div>
+          <div class="metric"><div class="num">~200</div><div class="lbl">custom sites alongside it</div></div>
+          <div class="metric"><div class="num">~$1M</div><div class="lbl">estimated annual savings to UCSF</div></div>
+          <div class="metric"><div class="num">Weeks→Minutes</div><div class="lbl">site deployment time</div></div>
+        </div>
+        <p class="metric-note">Savings estimate from UCSF's 2013 analysis of the platform's first years,
+        adjusted for scope; happy to walk through the math.</p>
+        <div class="case-tags">
+          <span class="tag">Drupal Multisite</span>
+          <span class="tag">Platform Governance</span>
+          <span class="tag">Higher Education</span>
+          <span class="tag">DevOps &amp; Automation</span>
+        </div>
+      </article>
+
+<article class="case-study">
+        <div class="case-top">Higher Ed &amp; Public Sector · Eric's Track Record</div>
+        <h3>Complex digital operations for research universities and agencies</h3>
+        <div class="case-sub">24+ years of platform, UX, and governance work</div>
+        <p>
+          Eric has spent 24+ years building sites and tools for complex higher ed,
+          academic research, and public sector environments — 19+ of them with content
+          management systems, and over a decade leading web and digital communications
+          operations and cross-functional teams.
+        </p>
+        <p>
+          His work spans information architecture, content strategy, accessibility,
+          DevOps, and workflow design — the full connective tissue between a platform
+          and the people who publish on it every day.
+        </p>
+        <p>
+          Today he is the Product Owner of UCSF's Platform for Academic Websites
+          (PAWS) — the university's initiative to move its 30+ academic units off
+          a "fend for yourself" landscape of aging, end-of-life sites and onto one
+          scalable Drupal platform: centralized hosting, a shared codebase,
+          UCSF-wide integrations, and consistent branding, with compliance built
+          into the platform rather than audited into it after the fact. It's the
+          platform-as-a-product playbook — the same approach John used to build
+          UCSF's first site platform, now aimed at the academic side of the house.
+        </p>
+        <div class="metrics">
+          <div class="metric"><div class="num">Product Owner</div><div class="lbl">UCSF PAWS platform</div></div>
+          <div class="metric"><div class="num">30+</div><div class="lbl">academic units in scope</div></div>
+          <div class="metric"><div class="num">50%</div><div class="lbl">targeted reduction in maintenance costs</div></div>
+        </div>
+        <div class="case-tags">
+          <span class="tag">Higher Education</span>
+          <span class="tag">Public Sector</span>
+          <span class="tag">UX &amp; Accessibility</span>
+          <span class="tag">Digital Governance</span>
+        </div>
+      </article>
+
+<article class="case-study">
+        <div class="case-top">California Health Care Foundation (CHCF) · Healthcare Philanthropy</div>
+        <h3>Website strategy and continuous improvement, as an ongoing partner</h3>
+        <div class="case-sub">Current engagement — this is what "supported for life" looks like</div>
+        <p>
+          CHCF's work depends on trust and accessibility — health policy research aimed
+          at communities who need information to be clear, current, and easy to reach.
+          John works with the foundation's communications team, led by Louise Chu, to
+          develop website strategy and project-manages the ongoing program of
+          improvements to the site.
+        </p>
+        <p>
+          No dramatic redesign, no big reveal — a markedly improved pace of delivered
+          improvements at a lower cost than the previous vendor. Recent work includes
+          migrating the site's WAF from Fastly to Cloudflare, cutting average daily
+          unwanted bot traffic to the site by roughly 70%. It's the engagement model we offer
+          every client: a long-term partner who knows your context, not a vendor you
+          brief from scratch each time.
+        </p>
+        <!-- VERIFIED Oct 26, 2026: pre-migration daily avg ~13K visits (range 9K–24K),
+             post-migration ~4K (range 3K–5K); cutover Oct 14→15 (13.5K → 4.7K).
+             1 − 4/13 ≈ 69%. Figures from WAF/server-side data, not GA (bots don't run JS).
+             CHCF already informed of the WAF work; confirm they're comfortable with
+             this specific number being public before launch. -->
+        <div class="case-tags">
+          <span class="tag">WordPress</span>
+          <span class="tag">Digital Strategy</span>
+          <span class="tag">Project Management</span>
+          <span class="tag">Continuous Improvement</span>
+        </div>
+      </article>
+
+<article class="case-study">
+        <div class="case-top">Sierra Club · Environmental Nonprofit</div>
+        <h3>Online presence and digital fundraising in the web's first generation</h3>
+        <div class="case-sub">Where it all started — 1996</div>
+        <p>
+          John managed the Sierra Club's website and online donations in the earliest
+          days of the web — when "digital strategy" meant explaining to people what a
+          website was for, and online fundraising meant building trust in a channel
+          nobody had used for giving before.
+        </p>
+        <p>
+          Thirty years later, the fundamentals haven't changed: meet the audience where
+          they are, keep it accessible, and make doing good as easy as possible.
+        </p>
+        <div class="case-tags">
+          <span class="tag">Nonprofit</span>
+          <span class="tag">Digital Fundraising</span>
+          <span class="tag">Early Web</span>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="honesty">
+      <h3>Why these and not a logo wall</h3>
+      <p>
+        Most agency work pages are a grid of client logos with no way to verify any of
+        it. We list engagements we can discuss in detail — what was actually delivered,
+        what it cost, what went wrong and how it was handled — and where a client's
+        name appears, it's because the work and the numbers are things we can stand
+        behind at reference-call depth. Want to know more? Ask us.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTORS ============ -->
+<section class="band">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Where We've Worked</div>
+      <h2>Deep in the sectors we serve</h2>
+      <p>Not verticals we "target" — worlds we've worked inside for decades.</p>
+    </div>
+    <div class="sector-grid">
+      <div class="sector-card">
+        <h3>Higher Education</h3>
+        <p>Universities and academic research environments — including years organizing
+        the BADCamp higher education summit, convening the sector's Drupal community.</p>
+      </div>
+      <div class="sector-card">
+        <h3>Healthcare &amp; Foundations</h3>
+        <p>Health policy philanthropy and health-focused nonprofits, where accessibility
+        and trust aren't features — they're the mission.</p>
+      </div>
+      <div class="sector-card">
+        <h3>Environmental &amp; Nonprofit</h3>
+        <p>Advocacy and mission organizations, from the Sierra Club's pioneering web
+        presence to today's campaign and volunteer platforms.</p>
+      </div>
+      <div class="sector-card">
+        <h3>Public Sector</h3>
+        <p>Agencies and public-serving institutions, where governance, security, and
+        plain-language accessibility are table stakes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>Want the details behind any of these?</h2>
+    <p>Ask us anything about the work above — what we'd do differently, what it cost,
+    how long it took. Real numbers, real answers.</p>
+    <a class="btn btn-gold" href="mailto:hello@lumentity.com">Start the Conversation</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Lumentity</h4>
+        <p>Digital solutions to help mission-driven organizations succeed in a rapidly changing world.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li>AI &amp; Automation</li>
+          <li>Digital Strategy</li>
+          <li>Digital Solutions</li>
+          <li>Support &amp; Maintenance</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/work">Case Studies</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Lumentity. All rights reserved.</span>
+      <span>Accessibility · Privacy · Security</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

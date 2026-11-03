@@ -1,0 +1,25 @@
+Page Title,Page Level,URL Slug,Parent Page,Notes,Content Owner,Status / Notes,Priority,Link to Draft Copy
+Home,L0,/,-,"Cards slimmed (no bullets); FAQ band 5 items; PAWS card added, Sierra Club card removed; hero CTAs point to /services and /contact",John,"Content final — in John's review, then Eric",Highest,homepage.html
+About Us,L1,/about,Home,"Covers Our People (founder bios) and Mission & Values; no separate pages at launch",John,Content final — final review,Medium,about.html
+Our People,L2,/about/people,About Us,"Folded into About Us — no separate page at launch (decided Oct 28 2026)",John,Covered by About Us,High,about.html#people
+Mission & Values,L2,/about/mission,About Us,"Folded into About Us — no separate page at launch (decided Oct 28 2026)",John,Covered by About Us,Medium,about.html
+Services,L1,/services,Home,"Overview page; cards carry Explore links to subpages; no hero CTA buttons",John,"Content final — Eric review",High,services.html
+AI & Automation,L2,/services/ai,Services,"Launches with site (SEO/AEO decision Oct 28 2026); lede rewritten (""not the tech giants""); hero CTAs removed",John,"Content final — Eric review",High,services/ai.html
+Digital Strategy,L2,/services/strategy,Services,"Launches with site; Assessment & Optimization card rewritten (no ""staffing/redundant"" wording)",Eric,"Content final — Eric review",High,services/strategy.html
+Digital Solutions,L2,/services/web,Services,"Launches with site; renamed from 'Web Development' (Oct 2026); slug unchanged; h1 copy refresh pending",Eric,"Content final — Eric review",High,services/web.html
+Support & Maintenance,L2,/services/support,Services,"Launches with site; renamed from 'Website Support & Maintenance' (Oct 2026); slug unchanged",Eric,"Content final — Eric review",High,services/support.html
+FAQ,L1,/faq,Home,"18 questions, 5 groups; WordPress maintenance FAQ added to homepage preview band; all claims verified (staged updates + client review gate confirmed Oct 28 2026)",John,"Content final — Eric review; one open item: CHCF sign-off on ~70% WAF figure",High,faq.html
+Our Work,L1,/work,Home,"Named ""Our Work"" in nav (not Our Experience); case order: UCSF → Eric's PAWS/track record → CHCF → Sierra Club; new PAWS Product Owner card on homepage",John,Content final — Eric review,High,work.html
+Our Clients,L2,/experience/clients,Our Work,,TBD,Post-launch,Low,
+Case Studies,L2,/work/case-studies,Our Work,"Individual case-study pages deferred; work page carries the case studies at launch",TBD,Post-launch,Medium,
+UCSF Case Study,L3,/work/ucsf,Case Studies,,TBD,Post-launch,Low,
+CHCF Case Study,L3,/work/chcf,Case Studies,"WAF migration Fastly→Cloudflare, ~70% bot-traffic cut (pending CHCF sign-off)",TBD,Post-launch,Low,
+[Future Projects],L3,/work/{project-name},Case Studies,,TBD,Post-launch,Lowest,
+Blog,L1,/blog,Home,"Launches absent per Zed addendum §1; all footer links removed until it exists",TBD,Absent at launch — no links anywhere,Low,
+Blog Article,L2,/blog/{date}/{title},Blog,"SEO-optimized, e.g., ""Drupal 10 Migration Guide""",TBD,Post-launch,Low,
+Contact,L1,/contact,Home,"Form works as prototype; form to be BUILT IN ZOHO and integrated into the final site; spam protection + opt-in to mailing list with consent timestamps still required",John,"Content final — Eric review; Zoho build is an engineering task",High,contact.html
+Request a Free Audit,L2,/contact/free-audit,Contact,"Lead magnet — deferred; services pages link to /contact instead",John,Post-launch,Medium,
+Careers,L2,/contact/careers,Contact,Future hires,TBD,Post-launch,Lowest,
+Resources,L2,/resources,Home,,TBD,Post-launch,Low,
+Drupal Migration Checklist,L3,/resources/drupal-10-checklist,Resources,Downloadable PDF,TBD,Post-launch,Low,
+AI Readiness Assessment,L3,/resources/ai-readiness,Resources,Interactive tool or quiz,TBD,Post-launch,Low,
