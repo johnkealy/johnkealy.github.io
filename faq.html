@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumentity | FAQ</title>
+  <meta name="description" content="Frequently asked questions about working with Lumentity: AI and data privacy, costs, platforms and migrations, accessibility, and what an engagement looks like." />
+  <style>
+    :root {
+      --brand: #003366;
+      --brand-light: #1a5490;
+      --gold: #FFC107;
+      --ink: #1f2937;
+      --muted: #64748b;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --border: #e2e8f0;
+      --radius: 14px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Inter, "Segoe UI", system-ui, -apple-system, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; }
+    a { color: var(--brand-light); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+    header.site-header { background: var(--card); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 50; }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 24px; max-width: 1080px; margin: 0 auto; }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .brand-name { font-size: 1.35rem; font-weight: 700; color: var(--brand); letter-spacing: 0.01em; }
+    nav.main-nav { display: flex; gap: 26px; align-items: center; }
+    nav.main-nav a { color: var(--ink); font-weight: 500; font-size: 0.95rem; }
+    nav.main-nav a.btn-primary { color: #fff; }
+    .btn { display: inline-block; padding: 10px 20px; border-radius: 999px; font-weight: 600; font-size: 0.95rem; border: none; cursor: pointer; }
+    .btn-primary { background: var(--brand); color: #fff; }
+    .btn-primary:hover { background: var(--brand-light); text-decoration: none; }
+    .btn-gold { background: var(--gold); color: #1f2937; }
+
+    .page-hero { background: linear-gradient(160deg, #0b2545 0%, #003366 55%, #123f6d 100%); color: #fff; padding: 52px 0 56px; }
+    .page-hero .eyebrow { text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.78rem; color: var(--gold); font-weight: 700; margin-bottom: 14px; }
+    .page-hero h1 { font-size: 2.1rem; line-height: 1.15; font-weight: 800; max-width: 720px; }
+    .page-hero p.lede { margin: 16px 0 0; font-size: 1.05rem; max-width: 640px; color: #dbe6f3; }
+
+    section { padding: 60px 0; }
+    .faq-group { margin-bottom: 44px; }
+    .faq-group h2 { color: var(--brand); font-size: 1.3rem; font-weight: 800; margin-bottom: 18px; padding-bottom: 8px; border-bottom: 2px solid var(--gold); display: inline-block; }
+    details { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 16px 20px; margin-bottom: 12px; }
+    details summary { font-weight: 600; color: var(--brand); cursor: pointer; }
+    details p { margin-top: 10px; color: #334155; font-size: 0.96rem; }
+    details p + p { margin-top: 10px; }
+
+    .still-stuck { background: #eaf1f9; border-radius: var(--radius); padding: 32px 30px; text-align: center; }
+    .still-stuck h2 { color: var(--brand); font-size: 1.4rem; margin-bottom: 10px; }
+    .still-stuck p { color: #334155; max-width: 560px; margin: 0 auto 22px; font-size: 0.98rem; }
+
+    .cta-band { background: linear-gradient(140deg, #003366, #0b2545); color: #fff; text-align: center; }
+    .cta-band h2 { font-size: 1.8rem; font-weight: 800; margin-bottom: 12px; }
+    .cta-band p { color: #dbe6f3; max-width: 560px; margin: 0 auto 28px; }
+
+    footer.site-footer { background: #0b1e33; color: #94a8c0; padding: 48px 0 36px; font-size: 0.9rem; }
+    .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+    .footer-grid h4 { color: #fff; font-size: 0.95rem; margin-bottom: 14px; }
+    .footer-grid ul { list-style: none; }
+    .footer-grid ul li { padding: 4px 0; }
+    .footer-grid a { color: #94a8c0; }
+    .footer-grid a:hover { color: #fff; }
+    .footer-bottom { border-top: 1px solid #1e3350; margin-top: 36px; padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; font-size: 0.82rem; max-width: 1080px; margin-left: auto; margin-right: auto; padding-left: 24px; padding-right: 24px; }
+
+    @media (max-width: 860px) {
+      .footer-grid { grid-template-columns: 1fr; }
+      nav.main-nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <svg width="40" height="40" viewBox="0 0 100 100" aria-label="Lumentity logo mark">
+        <g stroke="#003366" stroke-width="7" stroke-linecap="round">
+          <line x1="50" y1="50" x2="50" y2="8"  /><polygon points="50,0 43,14 57,14" fill="#003366"/>
+          <line x1="50" y1="50" x2="50" y2="92" /><polygon points="50,100 43,86 57,86" fill="#003366"/>
+          <line x1="50" y1="50" x2="8"  y2="50" /><polygon points="0,50 14,43 14,57" fill="#003366"/>
+          <line x1="50" y1="50" x2="92" y2="50" /><polygon points="100,50 86,43 86,57" fill="#003366"/>
+          <line x1="50" y1="50" x2="20" y2="20" /><polygon points="14,14 26,20 20,26" fill="#FFC107"/>
+          <line x1="50" y1="50" x2="80" y2="20" /><polygon points="86,14 80,26 74,20" fill="#FFC107"/>
+          <line x1="50" y1="50" x2="20" y2="80" /><polygon points="14,86 20,74 26,80" fill="#FFC107"/>
+          <line x1="50" y1="50" x2="80" y2="80" /><polygon points="86,86 74,80 80,74" fill="#FFC107"/>
+        </g>
+        <circle cx="50" cy="50" r="9" fill="#003366"/>
+      </svg>
+      <span class="brand-name">Lumentity</span>
+    </div>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="/services">Services</a>
+      <a href="/about">Why Lumentity</a>
+      <a href="/work">Our Work</a>
+      <a href="/faq">FAQ</a>
+      <a class="btn btn-primary" href="/contact">Get in Touch</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="eyebrow">FAQ</div>
+    <h1>Straight answers, before you have to ask twice</h1>
+    <p class="lede">
+      The questions mission-driven organizations ask us most — about AI and data,
+      costs, platforms, accessibility, and what working with us actually looks like.
+      If your question isn't here, ask us; we'll answer it and probably add it.
+    </p>
+  </div>
+</div>
+
+<!-- ============ FAQ GROUPS ============ -->
+<section>
+  <div class="container">
+
+    <div class="faq-group">
+      <h2>AI &amp; Your Data</h2>
+      <details>
+        <summary>Is our data safe if we use AI?</summary>
+        <p>That depends on two things: where the AI runs, and how it's configured.
+        Where: you can run AI on infrastructure you control, so your data never
+        leaves your ownership — or you can use cloud AI services that offer real,
+        contractual privacy commitments: no training on your data, specified data
+        residency, compliance certifications. Both can be safe; they trade control
+        against convenience, and the right choice depends on your data and your
+        compliance environment.</p>
+        <p>How: data is safe when it's configured deliberately — you know what data
+        flows where, what each vendor promises, and whether that matches what
+        FERPA, HIPAA, or plain donor trust requires. Our job is to lay those
+        options out honestly so you can choose on purpose, rather than defaulting
+        to whichever vendor showed up first.</p>
+      </details>
+      <details>
+        <summary>Why would we want a custom AI agent for our nonprofit?</summary>
+        <p>To give staff their time back — and better serve your community. A custom AI agent can answer donor inquiries,
+        handle routine questions, and surface the right information for your
+        communities — continuously, in your organization's voice — while your team
+        handles the work that needs a human. The point isn't AI for its own sake; it's
+        your mission, better served.</p>
+      </details>
+      <details>
+        <summary>We don't have an AI policy. Can you help us create one?</summary>
+        <p>Yes — and we'd insist on it before deploying anything. A practical AI policy
+        covers what data may be used, what tools are approved, who is accountable, and
+        what your organization tells its communities. We've helped organizations draft
+        policies that fit their compliance environment, whether FERPA, HIPAA, or plain
+        donor trust.</p>
+      </details>
+    </div>
+
+    <div class="faq-group">
+      <h2>Strategy &amp; Engagements</h2>
+      <details>
+        <summary>Why do you start with strategy?</summary>
+        <p>Getting aligned on strategy early lets us deliver better results more
+        efficiently — projects without strategy are expensive guesswork. We take a
+        product-based approach: focused on delivering the features that meet your
+        strategic goals, without going down expensive dark alleys of costly but
+        unused technology. The approved strategy is what every later decision gets
+        measured against: what tools, what features, what budget, what order.</p>
+      </details>
+      <details>
+        <summary>What does that strategy process actually look like?</summary>
+        <p>We begin by engaging in a conversation with you and your stakeholders. We
+        assess what you have, facilitate the conversation about what your
+        organization needs to achieve its goals, and work with your stakeholders to
+        draft a strategy you approve. A strategy nobody signed off on is a strategy
+        nobody follows. In the end, you will have a living document your team owns —
+        one that evolves as your organization's needs change.</p>
+      </details>
+      <details>
+        <summary>What happens after the strategy is approved?</summary>
+        <p>We work with your team to prioritize work based on the strategy document.
+        Then we work iteratively: focused on the goals laid out for a short period —
+        generally two weeks — we review the work delivered, measure its impact,
+        assess whether the approach needs to change, and then begin the next set of
+        tasks, determined through that same collaborative process. Our years of
+        experience have shown this method to be the most effective way to deliver
+        value to our clients. Strategy, implementation, and continuous improvement
+        aren't three separate purchases; they're one engagement, and the strategy
+        document is what keeps it pointed at your goals.</p>
+      </details>
+      <details>
+        <summary>We already know what we need built. Can we skip to implementation?</summary>
+        <p>In our experience, skipping to implementation is often a mistake. Yes,
+        some circumstances — critical upgrades or accessibility fixes — can go into a
+        quick triage project, but the most successful projects align technology
+        improvements with the organization's strategic goals. A short strategy
+        engagement is the cheapest way to ensure a successful project.</p>
+      </details>
+    </div>
+
+    <div class="faq-group">
+      <h2>Platforms &amp; Migrations</h2>
+      <details>
+        <summary>Why should we migrate to Drupal 11?</summary>
+        <p>Migrating from Drupal 10 to Drupal 11 is very straightforward — since
+        Drupal 8, Drupal has been much easier to upgrade than in the past. There is
+        almost always some downtime — typically minutes, not hours — and we
+        schedule it for your lowest-traffic windows. Drupal 11
+        is the most secure, full-featured version of Drupal. And the timing matters:
+        Drupal 10 reaches end of security support on December 9, 2026 — and every
+        Drupal 10 site has to pass through Drupal 11 before Drupal 12. Our team has
+        led many major Drupal upgrades over the years — most recently the main UCSF
+        website and around 20 custom sites from Drupal 10 to 11.</p>
+      </details>
+      <details>
+        <summary>Why does our WordPress site need regular maintenance?</summary>
+        <p>WordPress powers a huge share of the web, which makes it a constant
+        target — and the pace of core security releases has increased sharply in
+        recent years. Falling behind on core, plugin, or theme updates leaves your
+        site exposed to vulnerabilities that are being actively exploited. We keep
+        core, plugins, and themes current, test every update in development and
+        staging — with your review of staging before anything is deployed — and
+        monitor for the vulnerabilities that actually get exploited.</p>
+      </details>
+      <details>
+        <summary>Can you support our existing Drupal or WordPress site?</summary>
+        <p>Yes — we specialize in taking over existing sites and improving their
+        security, performance, and compliance without a rebuild. Sometimes the right
+        answer is the site you already own, maintained properly. We'd rather tell
+        you that than sell you a new one.</p>
+      </details>
+      <details>
+        <summary>Why do you build on Drupal and WordPress specifically?</summary>
+        <p>Because they're open-source, and open-source means you own your platform.
+        No licensing lock-in, no vendor hostage-taking, and a global community
+        maintaining the code. For higher ed and nonprofits, they're also the platforms
+        your future hires will know how to work with — which matters for a site that
+        has to outlive any one contractor.</p>
+      </details>
+    </div>
+
+    <div class="faq-group">
+      <h2>Accessibility &amp; Compliance</h2>
+      <details>
+        <summary>What does accessibility actually mean for our site — and our legal risk?</summary>
+        <p>It means people with disabilities can use your site: screen readers can
+        navigate it, keyboard users can operate it, color contrast meets standards.
+        For most organizations the benchmark is WCAG 2.1 AA, which aligns with ADA and
+        Section 508 expectations. We build to that standard from the start, and our
+        support retainers include quarterly accessibility audits — because accessibility
+        is a practice, not a checkbox.</p>
+      </details>
+      <details>
+        <summary>Do you report honestly on accessibility conformance?</summary>
+        <p>Yes — including when the honest number is less flattering than the marketing
+        one. Any agency promising "100% accessibility compliance" on a real, changing
+        website is telling you something that can't be true. We test, we report actual
+        conformance findings, and we fix them.</p>
+      </details>
+    </div>
+
+    <div class="faq-group">
+      <h2>Costs &amp; Working With Us</h2>
+      <details>
+        <summary>How much does a project cost?</summary>
+        <p>It depends on scope — which is why we start with a conversation, not a
+        price list. What we can promise: a proposal with real numbers, no padded
+        line items, and no surprise change orders for work we should have anticipated.
+        Most organizations come to us with a budget they already have; our job is to
+        tell you what's achievable within it.</p>
+      </details>
+      <details>
+        <summary>What's included in retainer-based support?</summary>
+        <p>Security updates and monitoring, performance optimization, quarterly
+        accessibility audits, and dedicated hours for fixes and small enhancements —
+        with transparent monthly reporting. You always know what was done, what it
+        cost, and what's next.</p>
+      </details>
+      <details>
+        <summary>What happens when the project ends — are we dependent on you?</summary>
+        <p>By design, no. You own the code, the content, and the documentation. The
+        sites we build are meant to be run by your staff or taken over by anyone
+        you choose — that's the whole point of open-source and the whole point of
+        governance. Our happiest endings look like UCSF's multisite: still running,
+        staff-operated, long after we've left.</p>
+      </details>
+      <details>
+        <summary>What does starting with you look like?</summary>
+        <p>A 30-minute conversation about your mission, constraints, and what's
+        actually broken. It's free, and genuinely free — no pitch at the end. If we're
+        not the right fit, we'll tell you and point you toward people who are.</p>
+      </details>
+      <details>
+        <summary>Do you work with clients outside higher ed, healthcare, and nonprofits?</summary>
+        <p>Our experience runs deepest in mission-driven sectors, and that's where we
+        invest. But the fundamentals — open platforms, honest numbers, accessibility,
+        long-term stewardship — travel well. If your organization values them, the
+        conversation is worth having.</p>
+      </details>
+    </div>
+
+    <div class="still-stuck">
+      <h2>Still stuck on something?</h2>
+      <p>Ask us directly — we read every message ourselves, and questions from real
+      organizations are how this page grows. Answers come from John or Eric, not an
+      autoresponder.</p>
+      <a class="btn btn-primary" href="/contact">Ask Your Question</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>Prefer to just talk it through?</h2>
+    <p>Sometimes a 30-minute conversation answers more than a page of FAQs ever could.</p>
+    <a class="btn btn-gold" href="mailto:hello@lumentity.com">Start the Conversation</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <h4>Lumentity</h4>
+      <p>Digital solutions to help mission-driven organizations succeed in a rapidly changing world.</p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul>
+        <li>AI &amp; Automation</li>
+        <li>Digital Strategy</li>
+        <li>Digital Solutions</li>
+        <li>Support &amp; Maintenance</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/work">Case Studies</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Lumentity. All rights reserved.</span>
+    <span>Accessibility · Privacy · Security</span>
+  </div>
+</footer>
+
+</body>
+</html>

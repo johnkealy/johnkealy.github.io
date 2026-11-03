@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumentity | Contact</title>
+  <meta name="description" content="Working draft of the Lumentity Contact page." />
+  <style>
+    :root {
+      --brand: #003366;
+      --brand-light: #1a5490;
+      --gold: #FFC107;
+      --ink: #1f2937;
+      --muted: #64748b;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --border: #e2e8f0;
+      --radius: 14px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Inter, "Segoe UI", system-ui, -apple-system, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; }
+    a { color: var(--brand-light); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+    header.site-header { background: var(--card); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 50; }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 24px; max-width: 1080px; margin: 0 auto; }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .brand-name { font-size: 1.35rem; font-weight: 700; color: var(--brand); letter-spacing: 0.01em; }
+    nav.main-nav { display: flex; gap: 26px; align-items: center; }
+    nav.main-nav a { color: var(--ink); font-weight: 500; font-size: 0.95rem; }
+    nav.main-nav a.btn-primary { color: #fff; }
+    .btn { display: inline-block; padding: 10px 20px; border-radius: 999px; font-weight: 600; font-size: 0.95rem; border: none; cursor: pointer; }
+    .btn-primary { background: var(--brand); color: #fff; }
+    .btn-primary:hover { background: var(--brand-light); text-decoration: none; }
+    .btn-gold { background: var(--gold); color: #1f2937; }
+
+    .page-hero { background: linear-gradient(160deg, #0b2545 0%, #003366 55%, #123f6d 100%); color: #fff; padding: 52px 0 56px; }
+    .page-hero .eyebrow { text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.78rem; color: var(--gold); font-weight: 700; margin-bottom: 14px; }
+    .page-hero h1 { font-size: 2.1rem; line-height: 1.15; font-weight: 800; max-width: 720px; }
+    .page-hero p.lede { margin: 16px 0 0; font-size: 1.05rem; max-width: 620px; color: #dbe6f3; }
+
+    section { padding: 60px 0; }
+    .band { background: var(--card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+
+    .contact-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 48px; align-items: start; }
+    .contact-form { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 36px 34px; }
+    .contact-form h2 { color: var(--brand); font-size: 1.35rem; margin-bottom: 6px; }
+    .contact-form .form-note { color: var(--muted); font-size: 0.9rem; margin-bottom: 22px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .field { margin-bottom: 18px; }
+    .field label { display: block; font-weight: 600; font-size: 0.88rem; margin-bottom: 6px; color: #334155; }
+    .field input, .field select, .field textarea {
+      width: 100%; padding: 11px 13px; border: 1px solid var(--border); border-radius: 9px;
+      font-size: 0.95rem; font-family: inherit; color: var(--ink); background: #fff;
+    }
+    .field textarea { min-height: 130px; resize: vertical; }
+    .checkbox-row { display: flex; align-items: flex-start; }
+    .checkbox-label { display: flex; gap: 10px; font-weight: 500 !important; font-size: 0.9rem; color: #334155; cursor: pointer; }
+    .checkbox-label input[type="checkbox"] { width: 18px; height: 18px; margin-top: 3px; accent-color: var(--brand); flex-shrink: 0; }
+    .field input:focus, .field select:focus, .field textarea:focus { outline: 2px solid var(--brand-light); border-color: var(--brand-light); }
+    .form-legal { font-size: 0.78rem; color: var(--muted); margin-top: 14px; }
+
+    .expect-card { background: #eaf1f9; border-radius: var(--radius); padding: 28px 26px; margin-bottom: 24px; }
+    .expect-card h3 { color: var(--brand); font-size: 1.05rem; margin-bottom: 12px; }
+    .expect-card ol { padding-left: 20px; color: #334155; font-size: 0.95rem; }
+    .expect-card ol li { padding: 5px 0; }
+    .direct-block h3 { color: var(--brand); font-size: 1.05rem; margin-bottom: 10px; }
+    .direct-block p { color: var(--muted); font-size: 0.95rem; margin-bottom: 14px; }
+    .direct-block a.mail { font-weight: 700; color: var(--brand); font-size: 1.02rem; }
+
+    .assurance { display: flex; gap: 34px; flex-wrap: wrap; justify-content: center; text-align: center; }
+    .assurance .item { max-width: 240px; }
+    .assurance .item h4 { color: var(--brand); font-size: 0.95rem; margin-bottom: 6px; }
+    .assurance .item p { color: var(--muted); font-size: 0.85rem; }
+
+    footer.site-footer { background: #0b1e33; color: #94a8c0; padding: 48px 0 36px; font-size: 0.9rem; }
+    .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; }
+    .footer-grid h4 { color: #fff; font-size: 0.95rem; margin-bottom: 14px; }
+    .footer-grid ul { list-style: none; }
+    .footer-grid ul li { padding: 4px 0; }
+    .footer-grid a { color: #94a8c0; }
+    .footer-grid a:hover { color: #fff; }
+    .footer-bottom { border-top: 1px solid #1e3350; margin-top: 36px; padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; font-size: 0.82rem; }
+
+    @media (max-width: 860px) {
+      .contact-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      nav.main-nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <svg width="40" height="40" viewBox="0 0 100 100" aria-label="Lumentity logo mark">
+        <g stroke="#003366" stroke-width="7" stroke-linecap="round">
+          <line x1="50" y1="50" x2="50" y2="8"  /><polygon points="50,0 43,14 57,14" fill="#003366"/>
+          <line x1="50" y1="50" x2="50" y2="92" /><polygon points="50,100 43,86 57,86" fill="#003366"/>
+          <line x1="50" y1="50" x2="8"  y2="50" /><polygon points="0,50 14,43 14,57" fill="#003366"/>
+          <line x1="50" y1="50" x2="92" y2="50" /><polygon points="100,50 86,43 86,57" fill="#003366"/>
+          <line x1="50" y1="50" x2="20" y2="20" /><polygon points="14,14 26,20 20,26" fill="#FFC107"/>
+          <line x1="50" y1="50" x2="80" y2="20" /><polygon points="86,14 80,26 74,20" fill="#FFC107"/>
+          <line x1="50" y1="50" x2="20" y2="80" /><polygon points="14,86 20,74 26,80" fill="#FFC107"/>
+          <line x1="50" y1="50" x2="80" y2="80" /><polygon points="86,86 74,80 80,74" fill="#FFC107"/>
+        </g>
+        <circle cx="50" cy="50" r="9" fill="#003366"/>
+      </svg>
+      <span class="brand-name">Lumentity</span>
+    </div>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="/services">Services</a>
+      <a href="/about">Why Lumentity</a>
+      <a href="/work">Our Work</a>
+      <a href="/faq">FAQ</a>
+      <a class="btn btn-primary" href="/contact">Get in Touch</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="eyebrow">Contact</div>
+    <h1>Let's talk about what's actually possible</h1>
+    <p class="lede">
+      A conversation with the founders — no sales deck, no junior account reps.
+      Tell us what you're trying to do, and we'll tell you honestly whether and
+      how we can help.
+    </p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="contact-grid">
+      <form class="contact-form" action="#" method="post">
+        <h2>Start the conversation</h2>
+        <p class="form-note">We read every message ourselves. Expect a reply within
+        one business day.</p>
+        <div class="form-row">
+          <div class="field">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+          </div>
+          <div class="field">
+            <label for="org">Organization</label>
+            <input id="org" name="org" type="text" autocomplete="organization" />
+          </div>
+        </div>
+        <div class="field">
+          <label for="email">Work email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required />
+        </div>
+        <div class="field">
+          <label for="interest">What can we help with?</label>
+          <select id="interest" name="interest">
+            <option value="">Select an area (optional)</option>
+            <option value="ai">AI &amp; Automation</option>
+            <option value="strategy">Digital Strategy &amp; Governance</option>
+            <option value="web">Web Development &amp; Design</option>
+            <option value="support">Support &amp; Maintenance</option>
+            <option value="notsure">Not sure yet — that's fine</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Tell us about your situation</label>
+          <textarea id="message" name="message" placeholder="What are you trying to accomplish? What's in the way?"></textarea>
+        </div>
+        <div class="field checkbox-row">
+          <label class="checkbox-label" for="optin">
+            <input id="optin" name="optin" type="checkbox" />
+            Occasionally send me notice of new blog posts and useful articles
+            — few and far between, we promise.
+          </label>
+        </div>
+        <button class="btn btn-primary" type="submit">Send Message</button>
+        <p class="form-legal">We use your details only to respond to your inquiry.
+        No lists, no newsletters you didn't ask for, no sharing.</p>
+      </form>
+
+      <div>
+        <div class="expect-card">
+          <h3>What happens next</h3>
+          <ol>
+            <li><strong>A reply from John or Eric</strong> — not an autoresponder and not a salesperson.</li>
+            <li><strong>A 30-minute conversation</strong> about your mission, constraints, and what's actually broken. Free, and genuinely free — no pitch at the end.</li>
+            <li><strong>An honest read.</strong> If we're not the right fit, we'll say so — and point you toward people who are.</li>
+          </ol>
+        </div>
+        <div class="direct-block">
+          <h3>Prefer email?</h3>
+          <p>Write to us directly at</p>
+          <a class="mail" href="mailto:hello@lumentity.com">hello@lumentity.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="container">
+    <div class="assurance">
+      <div class="item">
+        <h4>Senior people, end to end</h4>
+        <p>The people who reply to your message are the people who would do the work.</p>
+      </div>
+      <div class="item">
+        <h4>No pressure</h4>
+        <p>A discovery conversation is a conversation. We're comfortable being told "not now."</p>
+      </div>
+      <div class="item">
+        <h4>Your inbox is safe</h4>
+        <p>One reply, one follow-up if we miss each other — then we leave you alone.
+        (We may still send you a Christmas card.)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Lumentity</h4>
+        <p>Digital solutions to help mission-driven organizations succeed in a rapidly changing world.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li>AI &amp; Automation</li>
+          <li>Digital Strategy</li>
+          <li>Digital Solutions</li>
+          <li>Support &amp; Maintenance</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/work">Case Studies</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Lumentity. All rights reserved.</span>
+      <span>Accessibility · Privacy · Security</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
