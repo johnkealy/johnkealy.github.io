@@ -120,65 +120,46 @@
   </div>
 </header>
 
-<div class="page-hero">
-  <div class="container">
-    <div class="eyebrow">Contact</div>
-    <h1>Let's talk about what's actually possible</h1>
-    <p class="lede">
-      A conversation with the founders — no sales deck, no junior account reps.
-      Tell us what you're trying to do, and we'll tell you honestly whether and
-      how we can help.
-    </p>
-  </div>
-</div>
-
 <section>
   <div class="container">
     <div class="contact-grid">
-      <form class="contact-form" action="#" method="post">
-        <h2>Start the conversation</h2>
-        <p class="form-note">We read every message ourselves. Expect a reply within
-        one business day.</p>
-        <div class="form-row">
-          <div class="field">
-            <label for="name">Your name</label>
-            <input id="name" name="name" type="text" autocomplete="name" required />
-          </div>
-          <div class="field">
-            <label for="org">Organization</label>
-            <input id="org" name="org" type="text" autocomplete="organization" />
-          </div>
-        </div>
-        <div class="field">
-          <label for="email">Work email</label>
-          <input id="email" name="email" type="email" autocomplete="email" required />
-        </div>
-        <div class="field">
-          <label for="interest">What can we help with?</label>
-          <select id="interest" name="interest">
-            <option value="">Select an area (optional)</option>
-            <option value="ai">AI &amp; Automation</option>
-            <option value="strategy">Digital Strategy &amp; Governance</option>
-            <option value="web">Web Development &amp; Design</option>
-            <option value="support">Support &amp; Maintenance</option>
-            <option value="notsure">Not sure yet — that's fine</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="message">Tell us about your situation</label>
-          <textarea id="message" name="message" placeholder="What are you trying to accomplish? What's in the way?"></textarea>
-        </div>
-        <div class="field checkbox-row">
-          <label class="checkbox-label" for="optin">
-            <input id="optin" name="optin" type="checkbox" />
-            Occasionally send me notice of new blog posts and useful articles
-            — few and far between, we promise.
-          </label>
-        </div>
-        <button class="btn btn-primary" type="submit">Send Message</button>
-        <p class="form-legal">We use your details only to respond to your inquiry.
-        No lists, no newsletters you didn't ask for, no sharing.</p>
-      </form>
+      <!-- BEGIN ZOHO FORM -->
+      <!-- Live form: forms.zohopublic.com/jarthurkealygm1/form/ContactUs (Leads push to Zoho CRM).
+           To replace with Zoho's official snippet: Share > Embed > JavaScript, swap between these markers. -->
+      <div class="contact-form zf-wrap">
+        <div id="zf_div_4-IKyTKIz5MSMzKO8wQCxSjZPztOQiLfSwQVf4EUdX8"></div>
+        <script type="text/javascript">
+          (function () {
+            try {
+              var f = document.createElement("iframe");
+              f.src = "https://forms.zohopublic.com/jarthurkealygm1/form/ContactUs/formperma/4-IKyTKIz5MSMzKO8wQCxSjZPztOQiLfSwQVf4EUdX8?zf_rszfm=1";
+              f.style.border = "none";
+              f.style.width = "100%";
+              f.style.transition = "all 0.5s ease";
+              var d = document.getElementById("zf_div_4-IKyTKIz5MSMzKO8wQCxSjZPztOQiLfSwQVf4EUdX8");
+              d.appendChild(f);
+              window.addEventListener("message", function () {
+                var evntData = event.data;
+                if (evntData && evntData.constructor == String) {
+                  var zf_ifrm_data = evntData.split("|");
+                  if (zf_ifrm_data.length == 2) {
+                    var zf_perma = zf_ifrm_data[0];
+                    var zf_ifrm_ht_nw = (parseInt(zf_ifrm_data[1], 10) + 15) + "px";
+                    var iframe = document.getElementById("zf_div_4-IKyTKIz5MSMzKO8wQCxSjZPztOQiLfSwQVf4EUdX8").getElementsByTagName("iframe")[0];
+                    if ((iframe.src).indexOf("formperma") > 0 && (iframe.src).indexOf(zf_perma) > 0) {
+                      var prevIframeHeight = iframe.style.height;
+                      if (prevIframeHeight != zf_ifrm_ht_nw) {
+                        iframe.style.height = zf_ifrm_ht_nw;
+                      }
+                    }
+                  }
+                }
+              }, false);
+            } catch (e) { }
+          })();
+        </script>
+      </div>
+      <!-- END ZOHO FORM -->
 
       <div>
         <div class="expect-card">
@@ -251,5 +232,6 @@
   </div>
 </footer>
 
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" nonce="LO1e8Fbqb0SazTFxNzDK8g==" data-cf-beacon='{"version":"2024.11.0","token":"36b4216ae2dc4d5488c249161e71fe1e","spa":2}' crossorigin="anonymous"></script>
 </body>
 </html>
