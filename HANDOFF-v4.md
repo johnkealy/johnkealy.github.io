@@ -16,8 +16,8 @@
 
 ## 2. Target stack
 
-- **CMS:** Drupal, hosted on **Pantheon**; domain **lumentity.com**.
-- **Theme:** **UI Suite DaisyUI 5.0.x** (fallback: Artisan base theme).
+- **CMS:** GitHub Pages; domain **lumentity.com**.
+- **Theme:** Artisan base theme.
 - **Contact form:** built in **Zoho** and integrated — the draft form in `contact.html` is the prototype (fields, copy, structure). Requirements that survive the Zoho build: spam protection, opt-in feeding a mailing list with consent timestamps.
 - **Division of labor:** Eric site-builder/strategy; John code.
 

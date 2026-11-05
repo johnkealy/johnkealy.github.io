@@ -1,2 +1,2 @@
 # johnkealy.github.io
-Temporary site for Lumentity
+Temporary static site for Lumentity
