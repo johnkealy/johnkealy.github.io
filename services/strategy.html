@@ -44,9 +44,36 @@
     .header-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 24px; max-width: 1080px; margin: 0 auto; }
     .brand { display: flex; align-items: center; gap: 12px; }
     .brand-name { font-size: 1.35rem; font-weight: 700; color: var(--brand); letter-spacing: 0.01em; }
-    nav.main-nav { display: flex; gap: 26px; align-items: center; }
-    nav.main-nav a { color: var(--ink); font-weight: 500; font-size: 0.95rem; }
-    nav.main-nav a.btn-primary { color: #fff; }
+
+    .nav-container {
+      position: relative;
+    }
+
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      color: var(--ink);
+      cursor: pointer;
+      padding: 8px 12px;
+    }
+
+    nav.main-nav {
+      display: flex;
+      gap: 26px;
+      align-items: center;
+    }
+
+    nav.main-nav a {
+      color: var(--ink);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    nav.main-nav a.btn-primary {
+      color: #fff;
+    }
     .btn {
       display: inline-block; padding: 10px 20px; border-radius: 999px;
       font-weight: 600; font-size: 0.95rem; border: none; cursor: pointer;
@@ -129,7 +156,39 @@
       .split { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; }
       .page-hero h1 { font-size: 1.8rem; }
-      nav.main-nav { display: none; }
+      .hamburger {
+        display: block;
+      }
+
+      nav.main-nav {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 280px;
+        height: 100vh;
+        background: var(--card);
+        padding: 80px 24px 24px;
+        box-shadow: -4px 0 12px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+        overflow-y: auto;
+      }
+
+      nav.main-nav.active {
+        display: flex;
+      }
+
+      nav.main-nav a {
+        margin-bottom: 16px;
+      }
+
+      nav.main-nav a.btn-primary {
+        width: 100%;
+        text-align: center;
+        padding: 10px 20px;
+        white-space: nowrap;
+      }
     }
   </style>
 </head>
@@ -152,13 +211,16 @@
       </svg>
       <span class="brand-name">Lumentity</span>
     </div>
-    <nav class="main-nav" aria-label="Main navigation">
-      <a href="/services">Services</a>
-      <a href="/about">Why Lumentity</a>
-      <a href="/work">Our Work</a>
-      <a href="/faq">FAQ</a>
-      <a class="btn btn-primary" href="/contact">Get in Touch</a>
-    </nav>
+    <div class="nav-container">
+      <button class="hamburger" aria-label="Toggle menu">☰</button>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/services">Services</a>
+        <a href="/about">Why Lumentity</a>
+        <a href="/work">Our Work</a>
+        <a href="/faq">FAQ</a>
+        <a class="btn btn-primary" href="/contact">Get in Touch</a>
+      </nav>
+    </div>
   </div>
 </header>
 <div class="page-hero">
@@ -244,10 +306,10 @@
       <div>
         <h4>Services</h4>
         <ul>
-          <li>AI &amp; Automation</li>
+          <li>AI & Automation</li>
           <li>Digital Strategy</li>
           <li>Digital Solutions</li>
-          <li>Support &amp; Maintenance</li>
+          <li>Support & Maintenance</li>
         </ul>
       </div>
       <div>
@@ -265,6 +327,18 @@
     </div>
   </div>
 </footer>
+<script>
+  document.querySelector('.hamburger').addEventListener('click', function() {
+    document.querySelector('.main-nav').classList.toggle('active');
+  });
+
+  // Close menu when clicking a link
+  document.querySelectorAll('.main-nav a').forEach(link => {
+    link.addEventListener('click', function() {
+      document.querySelector('.main-nav').classList.remove('active');
+    });
+  });
+</script>
 <hr class="page-sep" />
 <!-- ================================================================
      PAGE 4: /services/web  — Web Development
